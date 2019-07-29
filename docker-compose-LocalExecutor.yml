@@ -16,7 +16,7 @@ services:
             - LOAD_EX=n
             - EXECUTOR=Local
         volumes:
-            - ./dags:/usr/local/airflow/dags
+            - ${DOCKER_DAG_LOCATION}:/usr/local/airflow/dags
             - ~/.aws/credentials:/usr/local/airflow/.aws/credentials
             # Uncomment to include custom plugins
             # - ./plugins:/usr/local/airflow/plugins
